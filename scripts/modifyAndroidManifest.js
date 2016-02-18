@@ -31,6 +31,12 @@ module.exports = function(context) {
         result = data.replace(/android:smallScreens="true"/g, 'android:smallScreens="false"');
       }
 
+      // set min sdk to 16
+      var attribute = 'android:minSdkVersion="14"';
+      if (data.indexOf(attribute) !== -1) {
+        result = data.replace(/android:minSdkVersion="14"/g, 'android:minSdkVersion="16"');
+      }
+
       if (result !== '') {
           fs.writeFile(manifestFile, result, 'utf8', function (err) {
             if (err) {
