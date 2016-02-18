@@ -26,9 +26,10 @@
 
     <!-- android -->
     <platform name="android">
-        <hook type="after_prepare" src="scripts/androidBeforeInstall.js" />
+        <hook type="after_prepare" src="scripts/modifyAndroidManifest.js" />
         <framework src="csdk.gradle" custom="true" type="gradleReference"/>
         <framework src="com.adobe.creativesdk.foundation:auth:0.9.7+"/>
+        <framework src="com.adobe.creativesdk:image:4.4.8+"/>
         <source-file src="src/android/AdobeAuthCredentialsApp.java" target-dir="src/com/adobe/phonegap/csdk" />
     </platform>
 

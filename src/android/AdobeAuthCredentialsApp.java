@@ -23,13 +23,12 @@ import android.app.Application;
 import android.util.Log;
 
 import com.adobe.creativesdk.foundation.AdobeCSDKFoundation;
-import com.adobe.creativesdk.foundation.auth.IAdobeAuthClientCredentials;
-import com.adobe.creativesdk.foundation.internal.auth.AdobeAuthIMSEnvironment;
+import com.adobe.creativesdk.aviary.IAviaryClientCredentials;
 
 /**
 * This class exposes methods in Cordova that can be called from JavaScript.
 */
-public class AdobeAuthCredentialsApp extends Application implements IAdobeAuthClientCredentials {
+public class AdobeAuthCredentialsApp extends Application implements IAviaryClientCredentials {
 
     /* Be sure to fill in the two strings below. */
     private static final String CREATIVE_SDK_CLIENT_ID = "<YOUR_CLIENT_ID_HERE>";
@@ -51,5 +50,10 @@ public class AdobeAuthCredentialsApp extends Application implements IAdobeAuthCl
     @Override
     public String getClientSecret() {
         return CREATIVE_SDK_CLIENT_SECRET;
+    }
+
+    @Override
+    public String getBillingKey() {
+        return "";
     }
 }
