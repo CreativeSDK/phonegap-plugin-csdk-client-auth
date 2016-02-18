@@ -1,5 +1,5 @@
 {
-    "name": "cordova-plugin-template",
+    "name": "phonegap-plugin-csdk-client-auth",
     "description": "This repo is a template for starting a new plugin.",
     "version": "0.0.1",
     "homepage": "http://github.com/macdonst/cordova-plugin-template#readme",
@@ -31,7 +31,7 @@
             "version": ">=3.0.0"
         }
     ],
-    "author": "Adobe PhoneGap Team",
+    "author": "Adobe",
     "license": "APL",
     "scripts": {
         "test": "jasmine-node --color spec"

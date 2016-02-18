@@ -1,0 +1,24 @@
+buildscript {
+     repositories {
+         jcenter()
+     }
+     dependencies {
+         classpath 'com.android.tools.build:gradle:1.5.0'
+
+         /* 1) Add the Gradle Retrolambda Plugin */
+         classpath 'me.tatarka:gradle-retrolambda:3.3.0-beta3'
+
+     }
+ }
+
+ allprojects {
+     repositories {
+         jcenter()
+         mavenCentral()
+         maven {
+
+             /* 2) Add the Creative SDK Maven repo URL */
+             url 'https://repo.adobe.com/nexus/content/repositories/releases/'
+         }
+     }
+ }

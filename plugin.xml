@@ -20,7 +20,7 @@
 -->
 
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
-           id="cordova-plugin-template"
+           id="phonegap-plugin-csdk-client-auth"
       version="0.0.1">
     <name>Template</name>
 
@@ -36,7 +36,11 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/Echo.java" target-dir="src/org/apache/cordova/test" />
+        <hook type="after_prepare" src="scripts/androidBeforeInstall.js" />
+        <!-- framework src="me.tatarka:gradle-retrolambda:3.3.0-beta3"/ -->
+        <framework src="csdk.gradle" custom="true" type="gradleReference"/>
+        <framework src="com.adobe.creativesdk.foundation:auth:0.9.7+"/>
+        <source-file src="src/android/AdobeAuthCredentialsApp.java" target-dir="src/com/adobe/phonegap/csdk" />
     </platform>
 
     <!-- ios -->
