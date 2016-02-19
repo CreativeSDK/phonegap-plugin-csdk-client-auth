@@ -22,6 +22,11 @@ package com.adobe.phonegap.csdk;
 import android.app.Application;
 import android.util.Log;
 
+import org.json.JSONObject;
+import org.json.JSONException;
+import java.io.InputStream;
+import java.io.IOException;
+
 import com.adobe.creativesdk.foundation.AdobeCSDKFoundation;
 import com.adobe.creativesdk.aviary.IAviaryClientCredentials;
 
@@ -30,16 +35,44 @@ import com.adobe.creativesdk.aviary.IAviaryClientCredentials;
 */
 public class AdobeAuthCredentialsApp extends Application implements IAviaryClientCredentials {
 
+    private static final String LOG_TAG = "Creative SDK Client Auth: AdobeAuthCredentialsApp";
+
     /* Be sure to fill in the two strings below. */
-    private static final String CREATIVE_SDK_CLIENT_ID = "<YOUR_CLIENT_ID_HERE>";
-    private static final String CREATIVE_SDK_CLIENT_SECRET = "<YOUR_CLIENT_SECRET_HERE>";
+    private static String CREATIVE_SDK_CLIENT_ID;
+    private static String CREATIVE_SDK_CLIENT_SECRET;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        Log.d("Simon", "holy crap, it seems to have worked");
+
+        try {
+            JSONObject keys = new JSONObject(loadJSONFromAsset());
+            CREATIVE_SDK_CLIENT_ID = keys.getString("CSDK_CLIENT_ID");
+            CREATIVE_SDK_CLIENT_SECRET = keys.getString("CSDK_CLIENT_SECRET");
+            Log.d(LOG_TAG, CREATIVE_SDK_CLIENT_ID);
+        }
+        catch (JSONException e) {
+            Log.d(LOG_TAG, e.getLocalizedMessage(), e);
+        }
+
+
         AdobeCSDKFoundation.initializeCSDKFoundation(getApplicationContext());
-        Log.d("Simon", "called csdk");
+    }
+
+    private String loadJSONFromAsset() {
+        String json = null;
+        try {
+            InputStream is = getAssets().open("www/keys.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
     }
 
     @Override

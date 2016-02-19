@@ -24,6 +24,9 @@
       version="0.0.1">
     <name>phonegap-plugin-csdk-client-auth</name>
 
+    <preference name="CREATIVE_SDK_CLIENT_ID" />
+    <preference name="CREATIVE_SDK_CLIENT_SECRET" />
+
     <!-- android -->
     <platform name="android">
         <hook type="after_prepare" src="scripts/modifyAndroidManifest.js" />
@@ -31,6 +34,10 @@
         <framework src="com.adobe.creativesdk.foundation:auth:0.9.7+"/>
         <framework src="com.adobe.creativesdk:image:4.4.8+"/>
         <source-file src="src/android/AdobeAuthCredentialsApp.java" target-dir="src/com/adobe/phonegap/csdk" />
+        <config-file target="res/values/strings.xml" parent="/resources">
+            <string name="creative_sdk_client_id">$CREATIVE_SDK_CLIENT_ID</string>
+            <string name="creative_sdk_client_secret">$CREATIVE_SDK_CLIENT_SECRET</string>
+        </config-file>
     </platform>
 
     <!-- ios -->
