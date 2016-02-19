@@ -17,24 +17,24 @@ module.exports = function(context) {
         throw new Error('Unable to find AndroidManifest.xml: ' + err);
       }
 
-      var result = '';
+      var result = data;
 
       // add Main app class
       var appClass = 'com.adobe.phonegap.csdk.AdobeAuthCredentialsApp';
       if (data.indexOf(appClass) === -1) {
-        result = data.replace(/<application/g, '<application android:name="' + appClass + '"');
+        result = result.replace(/<application/g, '<application android:name="' + appClass + '"');
       }
 
       // remove small screen support
       var attribute = 'android:smallScreens="true"';
       if (data.indexOf(attribute) !== -1) {
-        result = data.replace(/android:smallScreens="true"/g, 'android:smallScreens="false"');
+        result = result.replace(/android:smallScreens="true"/g, 'android:smallScreens="false"');
       }
 
       // set min sdk to 16
-      var attribute = 'android:minSdkVersion="14"';
-      if (data.indexOf(attribute) !== -1) {
-        result = data.replace(/android:minSdkVersion="14"/g, 'android:minSdkVersion="16"');
+      var minSdk = 'android:minSdkVersion="14"';
+      if (data.indexOf(minSdk) !== -1) {
+        result = result.replace(/android:minSdkVersion="14"/g, 'android:minSdkVersion="16"');
       }
 
       if (result !== '') {
