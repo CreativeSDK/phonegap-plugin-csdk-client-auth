@@ -43,11 +43,42 @@
     <!-- ios -->
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
-            <feature name="Echo">
-                <param name="ios-package" value="CDVEcho"/>
-            </feature>
+			<feature name="AdobeAuthCredentials">
+				<param name="ios-package" value="AdobeAuthCredentials"/>
+                <param name="onload" value="true" />
+			</feature>
         </config-file>
-        <source-file src="src/ios/CDVEcho.m" />
+
+        <config-file target="*-Info.plist" parent="CreativeSDK">
+            <key>CreativeSDK</key>
+            <dict>
+              <key>CSDKClientID</key>
+              <string>$CREATIVE_SDK_CLIENT_ID</string>
+              <key>CSDKClientSecret</key>
+              <string>$CREATIVE_SDK_CLIENT_SECRET</string>
+            </dict>
+        </config-file>
+
+        <source-file src="src/ios/AdobeAuthCredentials.m" />
+
+		<resource-file src="src/ios/AdobeCreativeSDKFrameworks/AdobeCreativeSDKCore.framework/Versions/A/Resources/AdobeCreativeSDKCoreResources.bundle" />
+        <framework src="src/ios/AdobeCreativeSDKFrameworks/AdobeCreativeSDKCore.framework" custom="true" />
+
+        <!-- framework src="src/ios/AdobeCreativeSDKFrameworks/AdobeCreativeSDKAppLibraryUX.framework" custom="true" />
+        <framework src="src/ios/AdobeCreativeSDKFrameworks/AdobeCreativeSDKAssetModel.Framework" custom="true" />
+        <framework src="src/ios/AdobeCreativeSDKFrameworks/AdobeCreativeSDKImage.framework" custom="true" />
+        <framework src="src/ios/AdobeCreativeSDKFrameworks/AdobeCreativeSDKAssetUX.Framework" custom="true" />
+        <framework src="src/ios/AdobeCreativeSDKFrameworks/AdobeCreativeSDKMarketUX.framework" custom="true" />
+        <framework src="src/ios/AdobeCreativeSDKFrameworks/AdobeCreativeSDKBehance.framework" custom="true" />
+        <framework src="src/ios/AdobeCreativeSDKFrameworks/AdobeCreativeSDKColor.framework" custom="true" />
+        <framework src="src/ios/AdobeCreativeSDKFrameworks/AdobeCreativeSDKCommonUX.framework" custom="true" / -->
+		<framework src="CoreMotion.framework" weak="true" />
+		<framework src="CoreBluetooth.framework" weak="true" />
+		<framework src="MobileCoreServices.framework" />
+		<framework src="Security.framework" />
+		<framework src="SystemConfiguration.framework" />
+        <framework src="libc++.dylib" />
+        <framework src="libz.dylib" />
     </platform>
 
 </plugin>
