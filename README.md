@@ -19,7 +19,11 @@
 #
 -->
 
-cordova-plugin-template
+phonegap-plugin-csdk-client-auth
 ------------------------
 
-This repo is a template for starting a new plugin.
+To add to your app:
+
+```
+phonegap plugin add --save https://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth --variable CREATIVE_SDK_CLIENT_ID="Client ID" --variable CREATIVE_SDK_CLIENT_SECRET="Client Secret"
+```
