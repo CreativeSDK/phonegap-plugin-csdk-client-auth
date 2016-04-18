@@ -24,6 +24,9 @@ buildscript {
  }
 
  android {
+    defaultConfig {
+        multiDexEnabled true
+    }
      /* 3) Exclude duplicate licenses */
      packagingOptions {
          exclude 'META-INF/LICENSE.txt'
