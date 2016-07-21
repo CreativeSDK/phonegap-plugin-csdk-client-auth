@@ -5,8 +5,19 @@
   <preference name="CSDK_CLIENT_ID_ANDROID"/>
   <preference name="CSDK_CLIENT_SECRET_IOS"/>
   <preference name="CSDK_CLIENT_SECRET_ANDROID"/>
+  <engines>
+    <engine name="cordova-android" version=">=5.2.2"/>
+  </engines>
   <platform name="android">
-    <hook type="after_prepare" src="scripts/modifyAndroidManifest.js"/>
+    <edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
+      <application android:name="com.adobe.phonegap.csdk.AdobeAuthCredentialsApp"/>
+    </edit-config>
+    <edit-config file="AndroidManifest.xml" target="/manifest/uses-sdk" mode="merge">
+      <uses-sdk android:minSdkVersion="16" />
+    </edit-config>
+    <edit-config file="AndroidManifest.xml" target="/manifest/supports-screens" mode="merge">
+      <supports-screens android:smallScreens="false" />
+    </edit-config>
     <framework src="csdk.gradle" custom="true" type="gradleReference"/>
     <framework src="com.android.support:multidex:1.0.0+"/>
     <framework src="com.adobe.creativesdk.foundation:auth:0.9.1062+"/>
