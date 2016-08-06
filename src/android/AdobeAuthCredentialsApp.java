@@ -45,34 +45,17 @@ public class AdobeAuthCredentialsApp extends Application implements IAviaryClien
     public void onCreate() {
         super.onCreate();
 
-        try {
-            JSONObject keys = new JSONObject(loadJSONFromAsset());
-            CREATIVE_SDK_CLIENT_ID = keys.getString("CSDK_CLIENT_ID");
-            CREATIVE_SDK_CLIENT_SECRET = keys.getString("CSDK_CLIENT_SECRET");
-            Log.d(LOG_TAG, CREATIVE_SDK_CLIENT_ID);
-        }
-        catch (JSONException e) {
-            Log.d(LOG_TAG, e.getLocalizedMessage(), e);
-        }
-
+        CREATIVE_SDK_CLIENT_ID = getStringResourceByName("creative_sdk_client_id");
+        CREATIVE_SDK_CLIENT_SECRET = getStringResourceByName("creative_sdk_client_secret");
+        Log.d(LOG_TAG, CREATIVE_SDK_CLIENT_ID);
 
         AdobeCSDKFoundation.initializeCSDKFoundation(getApplicationContext());
     }
 
-    private String loadJSONFromAsset() {
-        String json = null;
-        try {
-            InputStream is = getAssets().open("www/keys.json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            json = new String(buffer, "UTF-8");
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return null;
-        }
-        return json;
+    private String getStringResourceByName(String aString) {
+        String packageName = getPackageName();
+        int resId = getResources().getIdentifier(aString, "string", packageName);
+        return getString(resId);
     }
 
     @Override
