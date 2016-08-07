@@ -28,12 +28,12 @@ import java.io.InputStream;
 import java.io.IOException;
 
 import com.adobe.creativesdk.foundation.AdobeCSDKFoundation;
-import com.adobe.creativesdk.aviary.IAviaryClientCredentials;
+import com.adobe.creativesdk.foundation.auth.IAdobeAuthClientCredentials;
 
 /**
 * This class exposes methods in Cordova that can be called from JavaScript.
 */
-public class AdobeAuthCredentialsApp extends Application implements IAviaryClientCredentials {
+public class AdobeAuthCredentialsApp extends Application implements IAdobeAuthClientCredentials {
 
     private static final String LOG_TAG = "Creative SDK Client Auth: AdobeAuthCredentialsApp";
 
@@ -66,10 +66,5 @@ public class AdobeAuthCredentialsApp extends Application implements IAviaryClien
     @Override
     public String getClientSecret() {
         return CREATIVE_SDK_CLIENT_SECRET;
-    }
-
-    @Override
-    public String getBillingKey() {
-        return "";
     }
 }

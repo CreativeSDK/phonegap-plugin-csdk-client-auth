@@ -21,7 +21,7 @@
 
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
            id="phonegap-plugin-csdk-client-auth"
-      version="0.0.1">
+      version="0.0.2">
     <name>phonegap-plugin-csdk-client-auth</name>
 
     <preference name="CREATIVE_SDK_CLIENT_ID" />
@@ -32,8 +32,7 @@
         <hook type="after_prepare" src="scripts/modifyAndroidManifest.js" />
         <framework src="csdk.gradle" custom="true" type="gradleReference"/>
         <framework src="com.android.support:multidex:1.0.0+"/>
-        <framework src="com.adobe.creativesdk.foundation:auth:0.9.7+"/>
-        <framework src="com.adobe.creativesdk:image:4.4.8+"/>
+        <framework src="com.adobe.creativesdk.foundation:auth:0.9.1062+"/>
         <source-file src="src/android/AdobeAuthCredentialsApp.java" target-dir="src/com/adobe/phonegap/csdk" />
         <config-file target="res/values/strings.xml" parent="/resources">
             <string name="creative_sdk_client_id">$CREATIVE_SDK_CLIENT_ID</string>
