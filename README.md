@@ -33,6 +33,7 @@ Client Auth is required for all Creative SDK integrations. See the information b
 - [Prerequisites](#prereqs)
 - [Installation](#install)
 - [Setup guide](#setup)
+- [API guide](#api)
 
 
 <a name="prereqs"></a>
@@ -101,3 +102,7 @@ No action is required for Android. The Creative SDK for Android is delivered as 
 1. **iOS only:** download and add the Creative SDK to this plugin's `src/ios` directory (see "Downloading the Creative SDK" above)
 1. Add your target PhoneGap platform
 1. Build and run for your platform
+
+
+<a name="api"></a>
+There is no JavaScript API for this plugin. All Client Auth code is added to your app automatically.
