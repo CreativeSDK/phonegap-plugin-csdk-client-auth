@@ -99,4 +99,5 @@ No action is required for Android. The Creative SDK for Android is delivered as 
 1. Create a new PhoneGap app or `cd` into an existing one
 1. Add this plugin (see "Adding the plugin" above)
 1. **iOS only:** download and add the Creative SDK to this plugin's `src/ios` directory (see "Downloading the Creative SDK" above)
+1. Add your target PhoneGap platform
 1. Build and run for your platform
