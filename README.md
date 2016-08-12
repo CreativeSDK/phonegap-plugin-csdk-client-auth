@@ -30,10 +30,10 @@ Client Auth is required for all Creative SDK integrations. See the information b
 
 ### Contents
 
-[Prerequisites](#prerequisites)
-[Installation](#installation)
-[Setup guide](#setup-guide)
-[API guide](#api-guide)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Setup guide](#setup-guide)
+- [API guide](#api-guide)
 
 
 # Prerequisites
