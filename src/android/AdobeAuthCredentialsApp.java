@@ -45,8 +45,8 @@ public class AdobeAuthCredentialsApp extends Application implements IAdobeAuthCl
     public void onCreate() {
         super.onCreate();
 
-        CREATIVE_SDK_CLIENT_ID = getStringResourceByName("creative_sdk_client_id");
-        CREATIVE_SDK_CLIENT_SECRET = getStringResourceByName("creative_sdk_client_secret");
+        CREATIVE_SDK_CLIENT_ID = getStringResourceByName("csdk_client_id_android");
+        CREATIVE_SDK_CLIENT_SECRET = getStringResourceByName("csdk_client_secret_android");
         Log.d(LOG_TAG, CREATIVE_SDK_CLIENT_ID);
 
         AdobeCSDKFoundation.initializeCSDKFoundation(getApplicationContext());

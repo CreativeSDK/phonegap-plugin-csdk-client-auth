@@ -35,8 +35,8 @@
     // This could be a post-build hook
     NSLog(@"WARNING - AdobeAuthCredentials - pluginInitialize");
     NSDictionary* creativesdkDict = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CreativeSDK"];
-    NSString *ADOBE_CSDK_CLIENT_ID = [creativesdkDict objectForKey:@"CSDKClientID"];
-    NSString *ADOBE_CSDK_CLIENT_SECRET = [creativesdkDict objectForKey:@"CSDKClientSecret"];
+    NSString *ADOBE_CSDK_CLIENT_ID = [creativesdkDict objectForKey:@"CSDKClientID_iOS"];
+    NSString *ADOBE_CSDK_CLIENT_SECRET = [creativesdkDict objectForKey:@"CSDKClientSecret_iOS"];
 
     if ([@"" isEqualToString:ADOBE_CSDK_CLIENT_ID]) {
         NSLog(@"WARNING - AdobeAuthCredentials - ADOBE_CSDK_CLIENT_ID is not set");

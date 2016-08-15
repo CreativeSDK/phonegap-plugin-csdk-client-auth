@@ -24,8 +24,10 @@
       version="0.0.2">
     <name>phonegap-plugin-csdk-client-auth</name>
 
-    <preference name="CREATIVE_SDK_CLIENT_ID" />
-    <preference name="CREATIVE_SDK_CLIENT_SECRET" />
+    <preference name="CSDK_CLIENT_ID_IOS" />
+    <preference name="CSDK_CLIENT_ID_ANDROID" />
+    <preference name="CSDK_CLIENT_SECRET_IOS" />
+    <preference name="CSDK_CLIENT_SECRET_ANDROID" />
 
     <!-- android -->
     <platform name="android">
@@ -35,8 +37,8 @@
         <framework src="com.adobe.creativesdk.foundation:auth:0.9.1062+"/>
         <source-file src="src/android/AdobeAuthCredentialsApp.java" target-dir="src/com/adobe/phonegap/csdk" />
         <config-file target="res/values/strings.xml" parent="/resources">
-            <string name="creative_sdk_client_id">$CREATIVE_SDK_CLIENT_ID</string>
-            <string name="creative_sdk_client_secret">$CREATIVE_SDK_CLIENT_SECRET</string>
+            <string name="csdk_client_id_android">$CSDK_CLIENT_ID_ANDROID</string>
+            <string name="csdk_client_secret_android">$CSDK_CLIENT_SECRET_ANDROID</string>
         </config-file>
     </platform>
 
@@ -52,10 +54,10 @@
         <config-file target="*-Info.plist" parent="CreativeSDK">
             <key>CreativeSDK</key>
             <dict>
-              <key>CSDKClientID</key>
-              <string>$CREATIVE_SDK_CLIENT_ID</string>
-              <key>CSDKClientSecret</key>
-              <string>$CREATIVE_SDK_CLIENT_SECRET</string>
+              <key>CSDKClientID_iOS</key>
+              <string>$CSDK_CLIENT_ID_IOS</string>
+              <key>CSDKClientSecret_iOS</key>
+              <string>$CSDK_CLIENT_SECRET_IOS</string>
             </dict>
         </config-file>
 
