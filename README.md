@@ -72,7 +72,7 @@ For details, see [Registering Your Application](https://creativesdk.adobe.com/do
 
 ## Adding the plugin
 
-Use the command below to add the plugin to your app. If you only plan to ship on one platform, you can omit the Client ID and Secret variables for the platform you don't need.
+Use the command below to add the plugin to your app. If you only plan to ship on one platform, you can use dummy values for the Client ID and Secret variables for the platform you don't need.
 
 _**Note:** be sure to replace the Client ID and Secret strings with the values you received from the Creative SDK site (see "Registering for a Client ID and Secret" above)._
 
@@ -108,4 +108,15 @@ No action is required for Android. The Creative SDK for Android is delivered as 
 
 There is no JavaScript API for this plugin. All Client Auth code is added to your app automatically.
 
-If you need to update your Creative SDK Client ID and Secret, or add a new ID and Secret for a new platform, you can do that in this plugin's `plugin.xml` file.
+If you need to update your Creative SDK Client ID and Secret, or add a new ID and Secret for a new platform, you can do that in your app's `config.xml` file.
+
+The Client ID and Secret pairs are stored like this in `config.xml`:
+
+```
+<plugin name="phonegap-plugin-csdk-client-auth" spec="https://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth">
+        <variable name="CSDK_CLIENT_ID_IOS" value="iOS Client ID" />
+        <variable name="CSDK_CLIENT_ID_ANDROID" value="Android Client ID" />
+        <variable name="CSDK_CLIENT_SECRET_IOS" value="iOS Secret" />
+        <variable name="CSDK_CLIENT_SECRET_ANDROID" value="Android Secret" />
+</plugin>
+```
