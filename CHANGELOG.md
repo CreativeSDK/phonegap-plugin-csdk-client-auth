@@ -1,5 +1,15 @@
 # Change Log
 
+## [v1.0.1](https://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth/tree/v1.0.1) (2016-07-09)
+[Full Changelog](https://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth/compare/v1.0.0...v1.0.1)
+
+- 1.0.1 [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth/commit/f553ef6bd902d7d778de98805ec2af9a4742e625)
+- Bumping plugin version to 1.0.1 [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth/commit/bb9433d85205da8feceb6c463dd07bf699ca08bd)
+- Fixing error in plugin.xml [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth/commit/e11a537f04000ae15d824e405c2e6ba0e40c0c56)
+- Merge pull request #12 from CreativeSDK/docs [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth/commit/51109761f81ce98c9b4c0bf0ead140928e31171c)
+- Update CHANGELOG [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth/commit/3d8e377e7e14ac3b1bbf1b16f2805bcc9b85bfbb)
+- Fixed typo in CLI command. [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth/commit/ee1e6c057aff070e339a3e6be58b80459e9526ba)
+
 ## [v1.0.0](https://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth/tree/v1.0.0) (2016-08-17)
 [Full Changelog](https://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth/compare/v0.0.1...v1.0.0)
 
