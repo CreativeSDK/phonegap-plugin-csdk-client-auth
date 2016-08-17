@@ -76,20 +76,36 @@ Use the command below to add the plugin to your app. If you only plan to ship on
 
 _**Note:** be sure to replace the Client ID and Secret strings with the values you received from the Creative SDK site (see "Registering for a Client ID and Secret" above)._
 
+### Adding released version
+
 ```
-phonegap plugin add --save https://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth --variable CSDK_CLIENT_ID_IOS="iOS Client ID" --variable SDK_CLIENT_SECRET_IOS="iOS Secret" --variable CSDK_CLIENT_ID_ANDROID="Android Client ID" --variable CSDK_CLIENT_SECRET_ANDROID="Android Secret"
+phonegap plugin add --save phonegap-plugin-csdk-client-auth
+  --variable CSDK_CLIENT_ID_IOS="iOS Client ID"
+  --variable SDK_CLIENT_SECRET_IOS="iOS Secret"
+  --variable CSDK_CLIENT_ID_ANDROID="Android Client ID" 
+  --variable CSDK_CLIENT_SECRET_ANDROID="Android Secret"
+```
+
+### Adding development version
+
+```
+phonegap plugin add --save https://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth
+  --variable CSDK_CLIENT_ID_IOS="iOS Client ID"
+  --variable SDK_CLIENT_SECRET_IOS="iOS Secret"
+  --variable CSDK_CLIENT_ID_ANDROID="Android Client ID" 
+  --variable CSDK_CLIENT_SECRET_ANDROID="Android Secret"
 ```
 
 ## Downloading the Creative SDK
 
-**iOS** 
+**iOS**
 
-To get the iOS SDK, go to the [Downloads page](https://creativesdk.adobe.com/downloads.html), download the ZIP files, and extract them to the `src/ios` folder of this plugin. Extracting the ZIP will create an `AdobeCreativeSDKFrameworks` folder. 
+To get the iOS SDK, go to the [Downloads page](https://creativesdk.adobe.com/downloads.html), download the ZIP files, and extract them to the `src/ios` folder of this plugin. Extracting the ZIP will create an `AdobeCreativeSDKFrameworks` folder.
 
 The ZIP files contain all the frameworks in the Creative SDK, but for this plugin we will only be using the `AdobeCreativeSDKCore.framework`.
 
 
-**Android** 
+**Android**
 
 No action is required for Android. The Creative SDK for Android is delivered as a remote Maven repository, and the required framework will be downloaded automatically by the plugin.
 
@@ -98,7 +114,7 @@ No action is required for Android. The Creative SDK for Android is delivered as 
 
 1. Create a new PhoneGap app or `cd` into an existing one
 1. Add this plugin (see "Adding the plugin" above)
-1. **iOS only:** download and add the Creative SDK to this plugin's `src/ios` directory (see "Downloading the Creative SDK" above)
+1. **iOS only:** download and add the Creative SDK to this project's `plugins/phonegap-plugin-csdk-client-auth/src/ios` directory (see "Downloading the Creative SDK" above)
 1. Add your target PhoneGap platform
 1. Build and run for your platform
 
@@ -113,7 +129,7 @@ If you need to update your Creative SDK Client ID and Secret, or add a new ID an
 The Client ID and Secret pairs are stored like this in `config.xml`:
 
 ```
-<plugin name="phonegap-plugin-csdk-client-auth" spec="https://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth">
+<plugin name="phonegap-plugin-csdk-client-auth" spec="~1.0.0">
         <variable name="CSDK_CLIENT_ID_IOS" value="iOS Client ID" />
         <variable name="CSDK_CLIENT_ID_ANDROID" value="Android Client ID" />
         <variable name="CSDK_CLIENT_SECRET_IOS" value="iOS Secret" />
