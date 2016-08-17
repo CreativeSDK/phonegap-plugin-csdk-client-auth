@@ -27,8 +27,8 @@
       <key>CreativeSDK</key>
       <dict>
         <key>CSDKClientID_iOS</key>
-        <key>CSDKClientSecret_iOS</key>
         <string>$CSDK_CLIENT_ID_IOS</string>
+        <key>CSDKClientSecret_iOS</key>
         <string>$CSDK_CLIENT_SECRET_IOS</string>
       </dict>
     </config-file>
