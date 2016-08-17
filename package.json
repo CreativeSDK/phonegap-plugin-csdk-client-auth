@@ -1,42 +1,43 @@
 {
-    "name": "phonegap-plugin-csdk-client-auth",
-    "description": "This repo is a template for starting a new plugin.",
-    "version": "0.0.2",
-    "homepage": "http://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth#readme",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth.git"
-    },
-    "bugs": {
-        "url": "https://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth/issues"
-    },
-    "cordova": {
-        "id": "phonegap-plugin-csdk-client-auth",
-        "platforms": [
-            "ios",
-            "android",
-            "browser"
-        ]
-    },
-    "keywords": [
-        "ecosystem:cordova",
-        "ecosystem:phonegap",
-        "cordova-ios",
-        "cordova-android",
-        "cordova-browser"
-    ],
-    "engines": [
-        {
-            "name": "cordova",
-            "version": ">=3.0.0"
-        }
-    ],
-    "author": "Adobe",
-    "license": "APL",
-    "scripts": {
-        "test": "jasmine-node --color spec"
-    },
-    "devDependencies": {
-        "jasmine-node": "1.14.5"
+  "name": "phonegap-plugin-csdk-client-auth",
+  "description": "This repo is a template for starting a new plugin.",
+  "version": "0.0.2",
+  "homepage": "http://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth#readme",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth/issues"
+  },
+  "cordova": {
+    "id": "phonegap-plugin-csdk-client-auth",
+    "platforms": [
+      "ios",
+      "android",
+      "browser"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "ecosystem:phonegap",
+    "cordova-ios",
+    "cordova-android",
+    "cordova-browser"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
     }
+  ],
+  "author": "Adobe",
+  "license": "APL",
+  "scripts": {
+    "test": "jasmine-node --color spec"
+  },
+  "devDependencies": {
+    "jasmine-node": "1.14.5",
+    "pluginpub": "^0.0.5"
+  }
 }
