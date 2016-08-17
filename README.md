@@ -81,8 +81,8 @@ _**Note:** be sure to replace the Client ID and Secret strings with the values y
 ```
 phonegap plugin add --save phonegap-plugin-csdk-client-auth
   --variable CSDK_CLIENT_ID_IOS="iOS Client ID"
-  --variable SDK_CLIENT_SECRET_IOS="iOS Secret"
-  --variable CSDK_CLIENT_ID_ANDROID="Android Client ID" 
+  --variable CSDK_CLIENT_SECRET_IOS="iOS Secret"
+  --variable CSDK_CLIENT_ID_ANDROID="Android Client ID"
   --variable CSDK_CLIENT_SECRET_ANDROID="Android Secret"
 ```
 
@@ -91,8 +91,8 @@ phonegap plugin add --save phonegap-plugin-csdk-client-auth
 ```
 phonegap plugin add --save https://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth
   --variable CSDK_CLIENT_ID_IOS="iOS Client ID"
-  --variable SDK_CLIENT_SECRET_IOS="iOS Secret"
-  --variable CSDK_CLIENT_ID_ANDROID="Android Client ID" 
+  --variable CSDK_CLIENT_SECRET_IOS="iOS Secret"
+  --variable CSDK_CLIENT_ID_ANDROID="Android Client ID"
   --variable CSDK_CLIENT_SECRET_ANDROID="Android Secret"
 ```
 
