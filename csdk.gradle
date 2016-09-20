@@ -8,6 +8,14 @@ def doExtractStringFromManifest(name) {
     return matcher.group(1)
 }
 
+def minSdkVersion = 16
+
+if(cdvMinSdkVersion == null) {
+    ext.cdvMinSdkVersion = minSdkVersion;
+} else if (cdvMinSdkVersion.toInteger() < minSdkVersion) {
+    ext.cdvMinSdkVersion = minSdkVersion;
+}
+
 buildscript {
      repositories {
          jcenter()
