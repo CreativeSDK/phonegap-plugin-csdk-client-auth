@@ -1,5 +1,14 @@
 # Change Log
 
+## [v1.0.4](https://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth/tree/v1.0.4) (2016-07-09)
+[Full Changelog](https://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth/compare/v1.0.3...v1.0.4)
+
+- 1.0.4 [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth/commit/b1ebbeabd09f09b5b77011a6f9be8c7facda460c)
+- Bumping plugin version to 1.0.4 [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth/commit/4c983032af17b4c6f340ba5d63fcae5be70347dd)
+- Update to latest CSDK [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth/commit/16ee4414bba236c84cf3e2d3adaa2291b09e58e2)
+- Merge pull request #16 from purplecabbage/AllowCopyPasteToCLI [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth/commit/41fed999083f6a3b5cb9f0c21e2b21581eebe417)
+- Add sample text line continuations [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth/commit/044f4f6acf4159f11caf64ba7bce87d2d68a2af0)
+
 ## [v1.0.1](https://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth/tree/v1.0.1) (2016-07-09)
 [Full Changelog](https://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth/compare/v1.0.0...v1.0.1)
 
