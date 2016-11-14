@@ -9,7 +9,7 @@
     <hook type="after_prepare" src="scripts/modifyAndroidManifest.js"/>
     <framework src="csdk.gradle" custom="true" type="gradleReference"/>
     <framework src="com.android.support:multidex:1.0.0+"/>
-    <framework src="com.adobe.creativesdk.foundation:auth:0.9.1062+"/>
+    <framework src="com.adobe.creativesdk.foundation:auth:0.9.1186+"/>
     <source-file src="src/android/AdobeAuthCredentialsApp.java" target-dir="src/com/adobe/phonegap/csdk"/>
     <config-file target="res/values/strings.xml" parent="/resources">
       <string name="csdk_client_id_android">$CSDK_CLIENT_ID_ANDROID</string>
