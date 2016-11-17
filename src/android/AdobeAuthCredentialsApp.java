@@ -52,7 +52,7 @@ public class AdobeAuthCredentialsApp extends MultiDexApplication implements IAdo
         AdobeCSDKFoundation.initializeCSDKFoundation(getApplicationContext());
     }
 
-    private String getStringResourceByName(String aString) {
+    protected String getStringResourceByName(String aString) {
         String packageName = getPackageName();
         int resId = getResources().getIdentifier(aString, "string", packageName);
         return getString(resId);
