@@ -5,6 +5,8 @@
   <preference name="CSDK_CLIENT_ID_ANDROID"/>
   <preference name="CSDK_CLIENT_SECRET_IOS"/>
   <preference name="CSDK_CLIENT_SECRET_ANDROID"/>
+  <preference name="CSDK_CLIENT_REDIRECT_URL_IOS"/>
+  <preference name="CSDK_CLIENT_REDIRECT_URL_ANDROID"/>
   <platform name="android">
     <hook type="after_prepare" src="scripts/modifyAndroidManifest.js"/>
     <framework src="csdk.gradle" custom="true" type="gradleReference"/>
@@ -14,6 +16,7 @@
     <config-file target="res/values/strings.xml" parent="/resources">
       <string name="csdk_client_id_android">$CSDK_CLIENT_ID_ANDROID</string>
       <string name="csdk_client_secret_android">$CSDK_CLIENT_SECRET_ANDROID</string>
+      <string name="csdk_client_redirect_url_android">$CSDK_CLIENT_REDIRECT_URL_ANDROID</string>
     </config-file>
   </platform>
   <platform name="ios">
@@ -30,6 +33,8 @@
         <string>$CSDK_CLIENT_ID_IOS</string>
         <key>CSDKClientSecret_iOS</key>
         <string>$CSDK_CLIENT_SECRET_IOS</string>
+        <key>CSDKClientRedirectUrl_iOS</key>
+        <string>$CSDK_CLIENT_REDIRECT_URL_IOS</string>
       </dict>
     </config-file>
     <source-file src="src/ios/AdobeAuthCredentials.m"/>
