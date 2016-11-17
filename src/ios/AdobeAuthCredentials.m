@@ -37,6 +37,7 @@
     NSDictionary* creativesdkDict = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CreativeSDK"];
     NSString *ADOBE_CSDK_CLIENT_ID = [creativesdkDict objectForKey:@"CSDKClientID_iOS"];
     NSString *ADOBE_CSDK_CLIENT_SECRET = [creativesdkDict objectForKey:@"CSDKClientSecret_iOS"];
+    NSString *ADOBE_CSDK_CLIENT_REDIRECT_URL = [creativesdkDict objectForKey:@"CSDKClientRedirectUrl_iOS"];
 
     if ([@"" isEqualToString:ADOBE_CSDK_CLIENT_ID]) {
         NSLog(@"WARNING - AdobeAuthCredentials - ADOBE_CSDK_CLIENT_ID is not set");
@@ -44,10 +45,14 @@
     if ([@"" isEqualToString:ADOBE_CSDK_CLIENT_SECRET]) {
         NSLog(@"WARNING - AdobeAuthCredentials - ADOBE_CSDK_CLIENT_SECRET is not set");
     }
+    if ([@"" isEqualToString:ADOBE_CSDK_CLIENT_REDIRECT_URL]) {
+        NSLog(@"WARNING - AdobeAuthCredentials - ADOBE_CSDK_CLIENT_REDIRECT_URL is not set");
+    }
 
     [[AdobeUXAuthManager sharedManager]
         setAuthenticationParametersWithClientID:ADOBE_CSDK_CLIENT_ID
         withClientSecret:ADOBE_CSDK_CLIENT_SECRET];
+    [AdobeUXAuthManager sharedManager].redirectURL = [NSURL URLWithString:ADOBE_CSDK_CLIENT_REDIRECT_URL];
 }
 
 @end
