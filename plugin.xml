@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0" id="phonegap-plugin-csdk-client-auth" version="1.0.6">
   <name>phonegap-plugin-csdk-client-auth</name>
-  <preference name="CSDK_CLIENT_ID_IOS"/>
-  <preference name="CSDK_CLIENT_ID_ANDROID"/>
-  <preference name="CSDK_CLIENT_SECRET_IOS"/>
-  <preference name="CSDK_CLIENT_SECRET_ANDROID"/>
-  <preference name="CSDK_CLIENT_REDIRECT_URL_IOS"/>
-  <preference name="CSDK_CLIENT_REDIRECT_URL_ANDROID"/>
+  <preference name="CSDK_CLIENT_ID_IOS" default="change_me_on_install"/>
+  <preference name="CSDK_CLIENT_ID_ANDROID" default="change_me_on_install"/>
+  <preference name="CSDK_CLIENT_SECRET_IOS" default="change_me_on_install"/>
+  <preference name="CSDK_CLIENT_SECRET_ANDROID" default="change_me_on_install"/>
+  <preference name="CSDK_CLIENT_REDIRECT_URL_IOS" default="change_me_on_install"/>
+  <preference name="CSDK_CLIENT_REDIRECT_URL_ANDROID" default="change_me_on_install"/>
   <platform name="android">
     <hook type="after_prepare" src="scripts/modifyAndroidManifest.js"/>
     <framework src="csdk.gradle" custom="true" type="gradleReference"/>
