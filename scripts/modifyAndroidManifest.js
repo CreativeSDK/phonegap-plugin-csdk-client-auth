@@ -20,9 +20,24 @@ module.exports = function(context) {
       var result = data;
 
       // add Main app class
+      var plugins = context.opts.cordova.plugins;
       var appClass = 'com.adobe.phonegap.csdk.AdobeAuthCredentialsApp';
-      if (data.indexOf(appClass) === -1) {
-        result = result.replace(/<application/g, '<application android:name="' + appClass + '"');
+      var redirectAppClass = 'com.adobe.phonegap.csdk.AdobeAuthRedirectCredentialsApp';
+      if (plugins.find(function(element) {
+          return element === 'phonegap-plugin-csdk-image-editor';
+        })) {
+
+        if (data.indexOf(appClass) >= 0) {
+          result = result.replace(/AdobeAuthCredentialsApp/g, 'AdobeAuthRedirectCredentialsApp');
+        } else {
+          result = result.replace(/<application/g, '<application android:name="' + redirectAppClass + '"');
+        }
+      } else {
+        if (data.indexOf(redirectAppClass) >= 0) {
+          result = result.replace(/AdobeAuthRedirectCredentialsApp/g, 'AdobeAuthCredentialsApp');
+        } else {
+          result = result.replace(/<application/g, '<application android:name="' + appClass + '"');
+        }
       }
 
       // remove small screen support
