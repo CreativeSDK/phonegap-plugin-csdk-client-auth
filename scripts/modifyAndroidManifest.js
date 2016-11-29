@@ -30,12 +30,16 @@ module.exports = function(context) {
         if (data.indexOf(appClass) >= 0) {
           result = result.replace(/AdobeAuthCredentialsApp/g, 'AdobeAuthRedirectCredentialsApp');
         } else {
-          result = result.replace(/<application/g, '<application android:name="' + redirectAppClass + '"');
+          if (data.indexOf(redirectAppClass) === -1) {
+            result = result.replace(/<application/g, '<application android:name="' + redirectAppClass + '"');
+          }
         }
       } else {
         if (data.indexOf(redirectAppClass) >= 0) {
           result = result.replace(/AdobeAuthRedirectCredentialsApp/g, 'AdobeAuthCredentialsApp');
-        } else {
+        } else if (data.indexOf(appClass) >= 0) {
+          // do nothing
+        }else {
           result = result.replace(/<application/g, '<application android:name="' + appClass + '"');
         }
       }
