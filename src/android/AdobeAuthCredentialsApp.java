@@ -19,7 +19,7 @@ under the License.
 
 package com.adobe.phonegap.csdk;
 
-import android.app.Application;
+import android.support.multidex.MultiDexApplication;
 import android.util.Log;
 
 import org.json.JSONObject;
@@ -33,7 +33,7 @@ import com.adobe.creativesdk.foundation.auth.IAdobeAuthClientCredentials;
 /**
 * This class exposes methods in Cordova that can be called from JavaScript.
 */
-public class AdobeAuthCredentialsApp extends Application implements IAdobeAuthClientCredentials {
+public class AdobeAuthCredentialsApp extends MultiDexApplication implements IAdobeAuthClientCredentials {
 
     private static final String LOG_TAG = "Creative SDK Client Auth: AdobeAuthCredentialsApp";
 
