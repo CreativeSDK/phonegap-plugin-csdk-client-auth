@@ -117,7 +117,7 @@ No action is required for Android. The Creative SDK for Android is delivered as 
 1. **iOS only:** download and add the Creative SDK to this project's `plugins/phonegap-plugin-csdk-client-auth/src/ios` directory (see "Downloading the Creative SDK" above)
 1. Add your target PhoneGap platform
 1. Build and run for your platform
-
+1. Add Adobe domains to CSP
 
 <a name="api"></a>
 # Api Guide
